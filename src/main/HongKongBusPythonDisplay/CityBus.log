@@ -1,0 +1,1530 @@
+(MainThread) 2018-06-26 00:05:49,173 Unable to run the program
+Traceback (most recent call last):
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\psutil\_pswindows.py", line 635, in wrapper
+    return fun(self, *args, **kwargs)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\psutil\_pswindows.py", line 705, in cmdline
+    ret = cext.proc_cmdline(self.pid)
+PermissionError: [WinError 5] Access is denied
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/rober/ideaProjects/HongKongBus/src/main/HongKongBusPythonDisplay/CityBus.py", line 207, in <module>
+    myProcess = GetCityBusProcess()
+  File "C:/Users/rober/ideaProjects/HongKongBus/src/main/HongKongBusPythonDisplay/CityBus.py", line 51, in GetCityBusProcess
+    if 'sudo' in myProcess.cmdline():
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\psutil\__init__.py", line 661, in cmdline
+    return self._proc.cmdline()
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\psutil\_pswindows.py", line 638, in wrapper
+    raise AccessDenied(self.pid, self._name)
+psutil._exceptions.AccessDenied: psutil.AccessDenied (pid=120)
+(MainThread) 2018-06-26 00:08:33,669 CityBus ThreadManager Started
+(ThreadManager) 2018-06-26 00:08:33,670 RefreshBusTimeData started
+(KeepDisplayUpdated) 2018-06-26 00:08:33,671 Starting KeepDisplayUpdated
+(ThreadManager) 2018-06-26 00:08:33,671 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-06-26 00:08:36,238 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:08:38,379 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:08:40,254 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:08:42,604 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:08:44,242 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:08:46,391 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:08:48,440 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:08:50,372 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:08:52,331 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:08:54,381 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:08:56,426 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:08:58,474 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:00,418 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:02,470 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:04,418 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:06,376 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:08,508 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:10,366 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:12,608 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:14,452 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:16,501 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:18,549 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:20,479 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:22,435 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:24,485 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:26,477 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:28,585 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:30,503 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:32,572 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:34,526 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:36,990 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:39,036 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:40,961 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:43,124 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:45,171 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:47,220 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:49,061 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:51,210 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:53,157 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:55,029 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:57,154 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:09:59,102 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:01,148 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:03,192 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:05,218 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:07,290 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:09,079 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:11,182 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:13,235 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:15,082 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:17,282 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:19,649 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:21,730 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:23,773 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:25,676 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:27,771 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:29,819 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:31,865 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:33,709 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:35,717 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:38,158 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:40,265 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:42,312 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:44,462 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:46,457 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:48,453 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:50,300 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:52,346 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:54,397 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:56,331 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:10:58,386 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:00,331 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:02,380 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:04,430 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:07,297 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:09,345 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:11,250 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:13,437 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:15,385 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:17,845 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:19,997 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:21,836 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:23,884 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:25,832 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:28,084 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:29,926 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:31,872 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:33,919 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:35,881 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:38,426 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:40,315 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:42,318 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:43,958 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:45,997 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:48,052 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:49,998 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:51,944 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:53,991 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:55,954 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:58,087 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:11:59,945 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:02,183 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:04,025 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:05,982 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:08,124 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:10,091 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:12,015 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:14,062 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:16,024 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:18,157 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:20,206 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:22,149 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:24,302 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:26,075 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:28,192 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:30,140 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:32,090 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:34,133 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:36,093 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:38,095 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:40,275 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:42,117 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:44,167 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:46,106 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:48,262 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:50,178 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:52,155 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:54,283 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:56,152 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:12:58,293 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:00,143 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:02,189 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:04,238 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:06,289 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:08,334 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:10,380 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:12,224 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:14,476 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:16,216 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:18,370 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:20,420 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:22,465 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:24,307 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:26,286 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:28,405 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:30,454 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:32,501 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:34,547 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:36,324 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:38,441 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:40,355 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:42,401 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:44,586 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:46,400 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:48,575 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:50,524 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:52,468 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:54,518 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:56,367 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:13:58,096 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:00,252 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:01,991 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:04,041 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:06,190 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:08,035 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:10,388 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:12,044 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:14,072 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:16,124 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:18,067 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:20,119 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:22,055 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:24,111 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:26,084 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:28,127 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:30,080 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:32,088 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:34,092 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:36,195 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:38,138 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:40,184 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:42,101 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:44,181 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:46,230 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:48,269 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:50,326 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:52,131 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:54,316 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:56,164 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:14:58,311 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:00,254 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:02,139 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:04,250 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:06,147 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:08,247 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:10,174 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:12,231 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:14,289 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:16,150 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:18,199 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:20,232 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:22,224 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:24,321 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:26,269 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:28,247 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:30,262 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:31,799 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:33,763 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:35,793 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:37,762 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:39,778 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:41,839 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:43,833 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:45,989 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:47,811 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:49,828 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:51,595 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:53,114 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:54,836 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:56,848 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:15:58,934 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:00,844 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:02,776 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:04,464 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:06,327 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:07,883 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:09,846 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:11,863 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:13,987 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:15,899 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:17,883 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:19,926 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:21,442 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:23,400 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:25,408 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:27,503 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:29,451 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:31,455 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:33,481 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:35,427 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:37,114 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:39,004 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:41,020 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:43,060 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:45,117 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:47,061 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:49,107 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:51,157 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:53,026 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:55,041 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:57,094 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:16:59,055 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:01,089 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:03,058 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:05,078 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:07,017 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:09,282 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:11,130 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:14,710 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:16,760 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:18,705 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:20,851 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:22,797 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:24,822 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:26,834 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:28,840 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:30,889 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:32,938 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:34,957 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:36,827 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:38,876 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:40,925 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:42,559 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:44,024 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:46,056 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:48,015 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:50,143 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:51,778 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:53,545 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:55,673 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:57,718 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:17:59,661 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:01,708 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:03,638 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:05,622 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:07,447 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:09,189 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:11,336 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:13,191 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:15,231 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:17,276 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:19,221 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:21,272 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:23,321 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:25,367 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:27,321 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:29,360 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:31,306 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:33,351 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:35,257 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:37,271 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:39,294 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:41,340 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:43,385 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:45,301 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:47,485 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:49,420 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:51,471 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:53,355 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:55,336 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:57,484 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:18:59,366 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:01,402 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:03,354 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:05,505 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:07,352 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:09,331 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:11,345 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:13,392 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:15,371 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:17,487 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:19,415 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:21,381 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:23,426 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:25,480 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:27,421 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:29,420 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:31,618 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:33,657 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:35,509 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:37,456 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:39,506 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:41,553 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:43,496 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:45,490 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:47,490 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:49,541 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:51,579 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:53,514 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:55,582 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:57,708 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:19:59,547 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:01,622 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:03,605 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:05,650 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:07,767 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:09,614 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:11,657 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:13,705 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:15,653 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:17,586 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:19,647 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:21,594 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:23,648 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:25,685 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:27,632 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:29,785 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:31,726 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:33,690 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:35,826 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:37,667 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:39,776 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:41,643 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:43,811 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:45,759 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:47,322 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:49,343 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:51,387 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:53,436 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:55,279 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:57,328 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:20:59,378 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:01,426 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:03,286 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:05,355 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:07,262 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:09,413 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:11,461 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:13,511 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:15,364 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:17,194 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:19,025 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:20,878 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:22,930 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:24,677 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:26,398 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:28,664 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:30,381 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:32,564 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:34,702 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:36,447 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:38,457 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:40,391 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:42,498 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:44,687 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:46,480 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:48,528 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:50,577 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:52,500 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:54,673 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:56,514 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:21:58,558 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:00,611 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:02,566 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:04,562 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:06,539 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:08,498 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:10,589 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:12,578 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:14,742 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:16,587 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:18,632 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:20,684 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:22,572 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:24,678 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:26,828 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:28,612 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:30,687 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:32,654 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:34,698 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:36,763 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:38,689 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:40,605 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:42,653 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:44,688 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:46,720 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:48,723 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:50,740 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:52,737 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:54,751 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:56,731 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:22:58,292 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:00,311 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:02,361 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:04,303 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:06,270 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:08,290 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:10,349 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:12,269 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:14,334 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:16,388 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:18,335 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:20,350 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:22,393 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:24,347 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:26,363 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:28,472 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:30,419 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:32,466 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:34,631 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:36,457 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:38,498 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:40,525 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:42,297 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:44,242 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:46,085 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:48,066 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:49,775 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:51,618 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:53,664 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:55,714 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:57,758 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:23:59,599 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:01,650 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:03,330 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:05,166 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:07,181 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:09,172 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:11,158 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:13,116 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:14,753 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:16,647 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:18,779 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:20,632 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:22,712 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:24,796 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:26,704 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:28,723 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:30,941 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:32,318 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:34,280 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:36,179 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:37,767 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:39,702 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:41,728 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:43,736 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:45,767 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:47,723 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:49,793 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:51,927 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:53,667 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:55,306 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:57,318 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:24:59,246 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:01,296 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:03,263 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:04,932 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:06,844 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:08,927 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:10,852 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:12,896 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:14,911 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:16,899 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:18,926 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:20,936 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:22,958 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:25,005 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:26,928 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:28,958 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:30,945 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:32,954 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:35,044 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:36,708 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:38,468 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:40,565 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:42,492 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:25:44,550 RefreshBusTimeData while True Loop started
+(MainThread) 2018-06-26 00:27:13,006 CityBus ThreadManager Started
+(ThreadManager) 2018-06-26 00:27:13,007 RefreshBusTimeData started
+(KeepDisplayUpdated) 2018-06-26 00:27:13,008 Starting KeepDisplayUpdated
+(ThreadManager) 2018-06-26 00:27:13,009 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-06-26 00:27:14,815 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:16,927 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:18,872 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:20,919 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:22,893 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:25,022 RefreshBusTimeData while True Loop started
+(MainThread) 2018-06-26 00:27:30,107 CityBus ThreadManager Started
+(ThreadManager) 2018-06-26 00:27:30,108 RefreshBusTimeData started
+(ThreadManager) 2018-06-26 00:27:30,133 KeepDisplayUpdated started
+(KeepDisplayUpdated) 2018-06-26 00:27:30,134 Starting KeepDisplayUpdated
+(RefreshBusTimeData) 2018-06-26 00:27:32,502 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:34,488 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:36,486 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:38,505 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:40,587 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:42,651 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:44,678 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:46,519 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:48,378 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:50,619 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:52,571 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:54,620 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:56,569 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:27:58,537 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:00,662 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:02,607 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:04,654 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:06,599 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:08,545 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:10,685 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:12,734 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:14,590 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:16,636 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:18,642 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:20,619 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:22,590 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:24,829 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:26,599 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:28,640 RefreshBusTimeData while True Loop started
+(MainThread) 2018-06-26 00:28:32,358 CityBus ThreadManager Started
+(ThreadManager) 2018-06-26 00:28:32,358 RefreshBusTimeData started
+(KeepDisplayUpdated) 2018-06-26 00:28:32,359 Starting KeepDisplayUpdated
+(ThreadManager) 2018-06-26 00:28:32,360 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-06-26 00:28:34,651 RefreshBusTimeData while True Loop started
+(MainThread) 2018-06-26 00:28:39,266 CityBus ThreadManager Started
+(ThreadManager) 2018-06-26 00:28:39,272 RefreshBusTimeData started
+(ThreadManager) 2018-06-26 00:28:39,296 KeepDisplayUpdated started
+(KeepDisplayUpdated) 2018-06-26 00:28:39,299 Starting KeepDisplayUpdated
+(RefreshBusTimeData) 2018-06-26 00:28:41,743 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:43,663 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:45,819 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:47,764 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:49,817 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:51,864 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:53,748 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:55,751 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:57,797 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:28:59,845 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:01,671 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:03,715 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:05,789 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:07,836 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:09,883 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:11,846 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:13,746 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:15,817 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:17,761 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:19,917 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:21,818 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:23,795 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:25,827 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:27,898 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:29,945 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:31,894 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:33,840 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:36,089 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:37,943 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:39,982 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:42,029 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:43,363 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:45,509 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:47,566 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:49,410 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:51,661 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:53,510 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:56,168 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:29:58,012 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:00,060 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:02,104 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:04,027 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:06,094 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:08,050 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:10,087 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:12,041 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:14,043 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:16,242 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:18,279 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:20,125 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:22,179 RefreshBusTimeData while True Loop started
+(ThreadManager) 2018-06-26 00:30:25,246 RefreshBusTimeData started
+(MainThread) 2018-06-26 00:30:25,247 CityBus ThreadManager Started
+(KeepDisplayUpdated) 2018-06-26 00:30:25,247 Starting KeepDisplayUpdated
+(ThreadManager) 2018-06-26 00:30:25,248 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-06-26 00:30:27,186 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:29,128 RefreshBusTimeData while True Loop started
+(MainThread) 2018-06-26 00:30:33,689 CityBus ThreadManager Started
+(ThreadManager) 2018-06-26 00:30:33,692 RefreshBusTimeData started
+(KeepDisplayUpdated) 2018-06-26 00:30:33,697 Starting KeepDisplayUpdated
+(ThreadManager) 2018-06-26 00:30:33,706 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-06-26 00:30:35,896 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:37,726 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:39,793 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:41,638 RefreshBusTimeData while True Loop started
+(MainThread) 2018-06-26 00:30:43,894 CityBus ThreadManager Started
+(ThreadManager) 2018-06-26 00:30:43,894 RefreshBusTimeData started
+(KeepDisplayUpdated) 2018-06-26 00:30:43,895 Starting KeepDisplayUpdated
+(ThreadManager) 2018-06-26 00:30:43,895 KeepDisplayUpdated started
+(KeepDisplayUpdated) 2018-06-26 00:30:43,900 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 00:30:43,901 DisplayUpdated : Before RGBMatrix.SetImage
+(RefreshBusTimeData) 2018-06-26 00:30:46,190 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:48,285 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:50,436 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:52,273 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:54,327 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:56,224 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:30:58,422 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:00,469 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:02,309 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:04,358 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:06,410 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:08,391 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:10,298 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:12,325 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:14,395 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:16,340 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:18,490 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:20,375 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:22,383 RefreshBusTimeData while True Loop started
+(MainThread) 2018-06-26 00:31:34,154 CityBus ThreadManager Started
+(ThreadManager) 2018-06-26 00:31:34,159 RefreshBusTimeData started
+(ThreadManager) 2018-06-26 00:31:34,181 KeepDisplayUpdated started
+(KeepDisplayUpdated) 2018-06-26 00:31:34,186 Starting KeepDisplayUpdated
+(RefreshBusTimeData) 2018-06-26 00:31:36,540 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:38,574 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:40,460 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:42,467 RefreshBusTimeData while True Loop started
+(KeepDisplayUpdated) 2018-06-26 00:31:43,771 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 00:31:43,775 DisplayUpdated : Before RGBMatrix.SetImage
+(RefreshBusTimeData) 2018-06-26 00:31:44,439 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:46,568 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:48,339 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:50,458 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:52,506 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:54,454 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:56,502 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:31:58,660 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:00,595 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:02,534 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:04,592 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:06,549 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:08,592 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:10,535 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:12,575 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:14,521 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:16,471 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:18,604 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:20,500 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:22,619 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:24,556 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:26,699 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:28,762 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:30,804 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:32,601 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:34,698 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:36,542 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:38,798 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:40,583 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:42,667 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:44,636 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:46,782 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:48,723 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:50,882 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:32:52,665 RefreshBusTimeData while True Loop started
+(MainThread) 2018-06-26 00:32:56,280 CityBus ThreadManager Started
+(ThreadManager) 2018-06-26 00:32:56,281 RefreshBusTimeData started
+(KeepDisplayUpdated) 2018-06-26 00:32:56,281 Starting KeepDisplayUpdated
+(KeepDisplayUpdated) 2018-06-26 00:32:56,285 DisplayUpdated : Before RGBMatrix.Clear
+(ThreadManager) 2018-06-26 00:32:56,286 KeepDisplayUpdated started
+(KeepDisplayUpdated) 2018-06-26 00:32:56,286 DisplayUpdated : Before RGBMatrix.SetImage
+(RefreshBusTimeData) 2018-06-26 00:32:58,843 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:00,795 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:02,734 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:04,422 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:06,019 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:08,058 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:10,004 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:12,259 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:14,100 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:16,149 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:18,092 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:20,143 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:21,883 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:23,795 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:25,879 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:27,763 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:29,824 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:31,815 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:33,867 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:35,808 RefreshBusTimeData while True Loop started
+(MainThread) 2018-06-26 00:33:38,181 CityBus ThreadManager Started
+(ThreadManager) 2018-06-26 00:33:38,181 RefreshBusTimeData started
+(KeepDisplayUpdated) 2018-06-26 00:33:38,182 Starting KeepDisplayUpdated
+(ThreadManager) 2018-06-26 00:33:38,186 KeepDisplayUpdated started
+(KeepDisplayUpdated) 2018-06-26 00:33:38,186 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 00:33:38,187 DisplayUpdated : Before RGBMatrix.SetImage
+(RefreshBusTimeData) 2018-06-26 00:33:40,257 RefreshBusTimeData while True Loop started
+(KeepDisplayUpdated) 2018-06-26 00:33:41,195 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 00:33:41,195 DisplayUpdated : Before RGBMatrix.SetImage
+(KeepDisplayUpdated) 2018-06-26 00:33:42,218 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 00:33:42,218 DisplayUpdated : Before RGBMatrix.SetImage
+(RefreshBusTimeData) 2018-06-26 00:33:42,468 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-06-26 00:33:44,311 RefreshBusTimeData while True Loop started
+(KeepDisplayUpdated) 2018-06-26 00:33:45,228 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 00:33:45,228 DisplayUpdated : Before RGBMatrix.SetImage
+(KeepDisplayUpdated) 2018-06-26 00:33:46,235 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 00:33:46,235 DisplayUpdated : Before RGBMatrix.SetImage
+(RefreshBusTimeData) 2018-06-26 00:33:46,359 RefreshBusTimeData while True Loop started
+(MainThread) 2018-06-26 08:07:20,869 CityBus ThreadManager Started
+(ThreadManager) 2018-06-26 08:07:20,869 RefreshBusTimeData started
+(KeepDisplayUpdated) 2018-06-26 08:07:20,869 Starting KeepDisplayUpdated
+(ThreadManager) 2018-06-26 08:07:20,869 KeepDisplayUpdated started
+(KeepDisplayUpdated) 2018-06-26 08:07:20,885 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 08:07:20,885 DisplayUpdated : Before RGBMatrix.SetImage
+(KeepDisplayUpdated) 2018-06-26 08:07:23,900 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 08:07:23,900 DisplayUpdated : Before RGBMatrix.SetImage
+(KeepDisplayUpdated) 2018-06-26 08:07:24,915 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 08:07:24,915 DisplayUpdated : Before RGBMatrix.SetImage
+(MainThread) 2018-06-26 08:07:28,242 CityBus ThreadManager Started
+(ThreadManager) 2018-06-26 08:07:28,258 RefreshBusTimeData started
+(KeepDisplayUpdated) 2018-06-26 08:07:28,258 Starting KeepDisplayUpdated
+(KeepDisplayUpdated) 2018-06-26 08:07:28,258 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 08:07:28,258 DisplayUpdated : Before RGBMatrix.SetImage
+(ThreadManager) 2018-06-26 08:07:28,258 KeepDisplayUpdated started
+(MainThread) 2018-06-26 08:08:08,471 CityBus ThreadManager Started
+(ThreadManager) 2018-06-26 08:08:08,487 RefreshBusTimeData started
+(KeepDisplayUpdated) 2018-06-26 08:08:08,487 Starting KeepDisplayUpdated
+(KeepDisplayUpdated) 2018-06-26 08:08:08,487 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 08:08:08,487 DisplayUpdated : Before RGBMatrix.SetImage
+(ThreadManager) 2018-06-26 08:08:08,487 KeepDisplayUpdated started
+(MainThread) 2018-06-26 08:08:41,026 CityBus ThreadManager Started
+(ThreadManager) 2018-06-26 08:08:41,026 RefreshBusTimeData started
+(KeepDisplayUpdated) 2018-06-26 08:08:41,026 Starting KeepDisplayUpdated
+(ThreadManager) 2018-06-26 08:08:41,042 KeepDisplayUpdated started
+(KeepDisplayUpdated) 2018-06-26 08:08:41,042 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 08:08:41,042 DisplayUpdated : Before RGBMatrix.SetImage
+(KeepDisplayUpdated) 2018-06-26 08:08:44,057 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 08:08:44,057 DisplayUpdated : Before RGBMatrix.SetImage
+(KeepDisplayUpdated) 2018-06-26 08:08:45,073 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 08:08:45,073 DisplayUpdated : Before RGBMatrix.SetImage
+(KeepDisplayUpdated) 2018-06-26 08:08:48,087 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 08:08:48,087 DisplayUpdated : Before RGBMatrix.SetImage
+(KeepDisplayUpdated) 2018-06-26 08:08:49,103 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 08:08:49,103 DisplayUpdated : Before RGBMatrix.SetImage
+(KeepDisplayUpdated) 2018-06-26 08:08:52,118 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 08:08:52,118 DisplayUpdated : Before RGBMatrix.SetImage
+(KeepDisplayUpdated) 2018-06-26 08:08:53,133 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 08:08:53,133 DisplayUpdated : Before RGBMatrix.SetImage
+(KeepDisplayUpdated) 2018-06-26 08:08:56,148 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 08:08:56,148 DisplayUpdated : Before RGBMatrix.SetImage
+(KeepDisplayUpdated) 2018-06-26 08:08:57,163 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 08:08:57,163 DisplayUpdated : Before RGBMatrix.SetImage
+(KeepDisplayUpdated) 2018-06-26 08:09:00,178 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 08:09:00,178 DisplayUpdated : Before RGBMatrix.SetImage
+(KeepDisplayUpdated) 2018-06-26 08:09:01,194 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 08:09:01,194 DisplayUpdated : Before RGBMatrix.SetImage
+(KeepDisplayUpdated) 2018-06-26 08:09:04,209 DisplayUpdated : Before RGBMatrix.Clear
+(KeepDisplayUpdated) 2018-06-26 08:09:04,209 DisplayUpdated : Before RGBMatrix.SetImage
+(MainThread) 2018-07-10 21:13:46,773 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 21:13:46,775 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 21:13:46,782 KeepDisplayUpdated started
+(MainThread) 2018-07-10 21:18:43,057 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 21:18:43,061 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 21:18:43,065 KeepDisplayUpdated started
+(MainThread) 2018-07-10 21:19:41,077 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 21:19:41,078 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 21:19:41,090 KeepDisplayUpdated started
+(MainThread) 2018-07-10 21:23:34,321 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 21:23:34,323 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 21:23:34,329 KeepDisplayUpdated started
+(MainThread) 2018-07-10 21:23:55,360 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 21:23:55,366 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 21:23:55,368 KeepDisplayUpdated started
+(MainThread) 2018-07-10 21:32:39,637 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 21:32:39,642 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 21:32:39,645 KeepDisplayUpdated started
+(MainThread) 2018-07-10 21:37:12,347 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 21:37:12,362 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 21:37:12,377 KeepDisplayUpdated started
+(MainThread) 2018-07-10 21:41:23,839 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 21:41:23,840 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 21:41:23,847 KeepDisplayUpdated started
+(MainThread) 2018-07-10 22:13:03,761 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 22:13:03,764 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 22:13:03,771 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-07-10 22:13:22,032 Connection error while refreshing BusTimeData
+(MainThread) 2018-07-10 22:16:45,128 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 22:16:45,129 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 22:16:45,138 KeepDisplayUpdated started
+(MainThread) 2018-07-10 22:22:30,656 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 22:22:30,658 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 22:22:30,665 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-07-10 22:22:35,890 Connection error while refreshing BusTimeData
+(MainThread) 2018-07-10 22:27:13,138 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 22:27:13,144 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 22:27:13,149 KeepDisplayUpdated started
+(MainThread) 2018-07-10 22:31:52,888 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 22:31:52,893 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 22:31:52,896 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-07-10 22:32:02,009 Connection error while refreshing BusTimeData
+(MainThread) 2018-07-10 22:32:48,168 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 22:32:48,175 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 22:32:48,179 KeepDisplayUpdated started
+(MainThread) 2018-07-10 22:33:17,449 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 22:33:17,451 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 22:33:17,460 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-07-10 22:33:21,202 Connection error while refreshing BusTimeData
+(MainThread) 2018-07-10 22:40:00,703 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 22:40:00,705 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 22:40:00,711 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-07-10 22:40:23,463 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-07-10 22:40:24,696 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-07-10 22:40:25,940 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-07-10 22:40:27,367 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-07-10 22:40:59,330 RefreshBusTimeData while True Loop started
+(MainThread) 2018-07-10 22:41:07,562 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 22:41:07,565 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 22:41:07,573 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-07-10 22:41:09,256 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-07-10 22:41:40,900 RefreshBusTimeData while True Loop started
+(MainThread) 2018-07-10 22:42:51,524 CityBus ThreadManager Started
+(ThreadManager) 2018-07-10 22:42:51,527 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 22:42:51,534 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-07-10 22:42:53,413 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-07-10 22:43:24,837 RefreshBusTimeData while True Loop started
+(MainThread) 2018-07-10 22:43:32,237 CityBus NT ThreadManager Started
+(ThreadManager) 2018-07-10 22:43:32,243 RefreshBusTimeData started
+(ThreadManager) 2018-07-10 22:43:32,247 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-07-10 22:43:33,762 RefreshBusTimeData while True Loop started
+(ThreadManager) 2018-07-15 00:28:15,675 RefreshBusTimeData started
+(MainThread) 2018-07-15 00:28:15,678 CityBus NT ThreadManager Started
+(ThreadManager) 2018-07-15 00:28:15,680 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-07-15 00:28:52,932 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-07-15 00:29:30,332 RefreshBusTimeData while True Loop started
+(MainThread) 2018-07-15 00:30:53,578 CityBus NT ThreadManager Started
+(ThreadManager) 2018-07-15 00:30:53,585 RefreshBusTimeData started
+(ThreadManager) 2018-07-15 00:30:53,588 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-07-15 00:31:01,032 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-07-15 00:31:05,660 RefreshBusTimeData while True Loop started
+(RefreshBusTimeData) 2018-07-15 00:31:12,146 RefreshBusTimeData while True Loop started
+(MainThread) 2018-07-15 00:31:31,169 CityBus NT ThreadManager Started
+(ThreadManager) 2018-07-15 00:31:31,176 RefreshBusTimeData started
+(ThreadManager) 2018-07-15 00:31:31,179 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-07-15 00:31:37,025 RefreshBusTimeData while True Loop started
+(MainThread) 2018-07-31 22:49:17,473 CityBus NT ThreadManager Started
+(ThreadManager) 2018-07-31 22:49:17,477 RefreshBusTimeData started
+(ThreadManager) 2018-07-31 22:49:17,489 KeepDisplayUpdated started
+(MainThread) 2018-07-31 22:49:33,459 CityBus NT ThreadManager Started
+(ThreadManager) 2018-07-31 22:49:33,472 RefreshBusTimeData started
+(ThreadManager) 2018-07-31 22:49:33,475 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-07-31 22:50:06,376 RefreshBusTimeData while True Loop started
+(MainThread) 2018-07-31 23:07:12,590 CityBus NT ThreadManager Started
+(ThreadManager) 2018-07-31 23:07:12,608 RefreshBusTimeData started
+(ThreadManager) 2018-07-31 23:07:12,620 KeepDisplayUpdated started
+(MainThread) 2018-08-17 18:05:50,337 CityBus NT ThreadManager Started
+(ThreadManager) 2018-08-17 18:05:50,357 RefreshBusTimeData started
+(ThreadManager) 2018-08-17 18:05:50,362 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-08-17 18:07:03,139 Connection error while refreshing BusTimeData
+(RefreshBusTimeData) 2018-08-17 18:07:05,221 HTTPSConnectionPool(host='hong-kong-bus.herokuapp.com', port=443): Max retries exceeded with url: /nextBusesTimesFor?sessionId=1 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000235286C9198>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+Traceback (most recent call last):
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\util\connection.py", line 56, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Program Files\Python36\lib\socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connectionpool.py", line 849, in _validate_conn
+    conn.connect()
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connection.py", line 314, in connect
+    conn = self._new_conn()
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connection.py", line 180, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x00000235286C9198>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\adapters.py", line 445, in send
+    timeout=timeout
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='hong-kong-bus.herokuapp.com', port=443): Max retries exceeded with url: /nextBusesTimesFor?sessionId=1 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000235286C9198>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/rober/ideaProjects/HongKongBus/src/main/HongKongBusPythonDisplay/CityBus.py", line 75, in RefreshBusTimeData
+    response = requests.get('https://hong-kong-bus.herokuapp.com/nextBusesTimesFor?sessionId=1')
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\sessions.py", line 512, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\sessions.py", line 622, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='hong-kong-bus.herokuapp.com', port=443): Max retries exceeded with url: /nextBusesTimesFor?sessionId=1 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000235286C9198>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+(MainThread) 2018-08-17 18:09:00,512 CityBus NT ThreadManager Started
+(ThreadManager) 2018-08-17 18:09:00,538 RefreshBusTimeData started
+(ThreadManager) 2018-08-17 18:09:00,543 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-08-17 18:10:32,593 Connection error while refreshing BusTimeData
+(RefreshBusTimeData) 2018-08-17 18:10:32,916 HTTPSConnectionPool(host='hong-kong-bus.herokuapp.com', port=443): Max retries exceeded with url: /nextBusesTimesFor?sessionId=1 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001C4F6455E10>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+Traceback (most recent call last):
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\util\connection.py", line 56, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Program Files\Python36\lib\socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connectionpool.py", line 849, in _validate_conn
+    conn.connect()
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connection.py", line 314, in connect
+    conn = self._new_conn()
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connection.py", line 180, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001C4F6455E10>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\adapters.py", line 445, in send
+    timeout=timeout
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='hong-kong-bus.herokuapp.com', port=443): Max retries exceeded with url: /nextBusesTimesFor?sessionId=1 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001C4F6455E10>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/rober/ideaProjects/HongKongBus/src/main/HongKongBusPythonDisplay/CityBus.py", line 75, in RefreshBusTimeData
+    response = requests.get('https://hong-kong-bus.herokuapp.com/nextBusesTimesFor?sessionId=1')
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\sessions.py", line 512, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\sessions.py", line 622, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='hong-kong-bus.herokuapp.com', port=443): Max retries exceeded with url: /nextBusesTimesFor?sessionId=1 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001C4F6455E10>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+(RefreshBusTimeData) 2018-08-17 18:14:08,655 Connection error while refreshing BusTimeData
+(RefreshBusTimeData) 2018-08-17 18:14:09,254 HTTPSConnectionPool(host='hong-kong-bus.herokuapp.com', port=443): Max retries exceeded with url: /nextBusesTimesFor?sessionId=1 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001C4F80F8A20>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+Traceback (most recent call last):
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\util\connection.py", line 56, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Program Files\Python36\lib\socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connectionpool.py", line 849, in _validate_conn
+    conn.connect()
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connection.py", line 314, in connect
+    conn = self._new_conn()
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connection.py", line 180, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001C4F80F8A20>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\adapters.py", line 445, in send
+    timeout=timeout
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='hong-kong-bus.herokuapp.com', port=443): Max retries exceeded with url: /nextBusesTimesFor?sessionId=1 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001C4F80F8A20>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/rober/ideaProjects/HongKongBus/src/main/HongKongBusPythonDisplay/CityBus.py", line 75, in RefreshBusTimeData
+    response = requests.get('https://hong-kong-bus.herokuapp.com/nextBusesTimesFor?sessionId=1')
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\sessions.py", line 512, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\sessions.py", line 622, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\rober\ideaProjects\HongKongBus\venv\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='hong-kong-bus.herokuapp.com', port=443): Max retries exceeded with url: /nextBusesTimesFor?sessionId=1 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001C4F80F8A20>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+(ThreadManager) 2018-09-02 16:22:15,466 About to start RefreshBusTimeData thread
+(MainThread) 2018-09-02 16:22:15,467 CityBus NT ThreadManager Started
+(RefreshBusTimeData) 2018-09-02 16:22:19,409 Beginning of While True Loop
+(ThreadManager) 2018-09-02 16:22:21,690 RefreshBusTimeData started
+(ThreadManager) 2018-09-02 16:22:24,251 KeepDisplayUpdated started
+(ThreadManager) 2018-09-02 16:26:53,498 About to start RefreshBusTimeData thread
+(MainThread) 2018-09-02 16:26:53,499 CityBus NT ThreadManager Started
+(RefreshBusTimeData) 2018-09-02 16:26:53,501 Beginning of While True Loop
+(ThreadManager) 2018-09-02 16:26:53,508 RefreshBusTimeData started
+(ThreadManager) 2018-09-02 16:26:53,515 KeepDisplayUpdated started
+(MainThread) 2018-09-02 16:31:42,511 CityBus NT ThreadManager Started
+(RefreshBusTimeData) 2018-09-02 16:31:42,516 Beginning of While True Loop
+(ThreadManager) 2018-09-02 16:31:42,516 RefreshBusTimeData started
+(ThreadManager) 2018-09-02 16:31:42,523 KeepDisplayUpdated started
+(MainThread) 2018-09-02 16:32:14,625 CityBus NT ThreadManager Started
+(RefreshBusTimeData) 2018-09-02 16:32:14,626 Beginning of While True Loop
+(ThreadManager) 2018-09-02 16:32:14,629 RefreshBusTimeData started
+(ThreadManager) 2018-09-02 16:32:14,638 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-09-02 16:32:59,585 RefreshBusTimeData successfully retrieved 3 elements
+(MainThread) 2018-09-17 21:11:01,800 CityBus NT ThreadManager Started
+(RefreshBusTimeData) 2018-09-17 21:11:01,802 Beginning of While True Loop
+(ThreadManager) 2018-09-17 21:11:01,805 RefreshBusTimeData started
+(ThreadManager) 2018-09-17 21:11:01,812 KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-09-17 21:11:13,713 RefreshBusTimeData successfully retrieved 1 elements
+(MainThread) 2018-09-17 22:37:51,213 CityBus NT ThreadManager Started
+(ThreadManager) 2018-09-17 22:37:51,219 RefreshBusTimeData started
+(RefreshBusTimeData) 2018-09-17 22:37:51,221 Beginning of While True Loop
+(ThreadManager) 2018-09-17 22:37:51,229 KeepDisplayUpdated started
+(MainThread) 2018-11-03 12:21:55,859 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 12:21:55,860 ThreadManager : RefreshBusTimeData started
+(ThreadManager) 2018-11-03 12:21:55,861 ThreadManager : KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-11-03 12:22:01,807 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-03 12:22:03,719 RefreshBusTimeData successfully retrieved 3 elements
+(MainThread) 2018-11-03 12:22:14,424 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 12:22:14,424 ThreadManager : RefreshBusTimeData started
+(ThreadManager) 2018-11-03 12:22:14,425 ThreadManager : KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-11-03 12:22:20,512 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-03 12:22:22,275 RefreshBusTimeData successfully retrieved 3 elements
+(MainThread) 2018-11-03 12:22:59,993 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 12:22:59,993 ThreadManager : RefreshBusTimeData started
+(ThreadManager) 2018-11-03 12:22:59,994 ThreadManager : KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-11-03 12:23:06,851 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-03 12:23:08,557 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-03 12:23:38,562 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-03 12:23:43,963 RefreshBusTimeData successfully retrieved 3 elements
+(MainThread) 2018-11-03 12:23:49,931 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 12:23:49,932 ThreadManager : RefreshBusTimeData started
+(ThreadManager) 2018-11-03 12:23:49,934 ThreadManager : KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-11-03 12:24:00,796 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-03 12:24:05,699 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-03 12:24:35,713 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-03 12:24:37,430 RefreshBusTimeData successfully retrieved 3 elements
+(ThreadManager) 2018-11-03 12:24:56,263 Arrived in ThreadManager
+(MainThread) 2018-11-03 12:24:56,264 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 12:24:56,264 ThreadManager : RefreshBusTimeData started
+(ThreadManager) 2018-11-03 12:24:56,265 ThreadManager : KeepDisplayUpdated started
+(RefreshBusTimeData) 2018-11-03 12:25:02,541 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-03 12:25:04,481 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-03 12:25:34,500 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-03 12:25:38,437 RefreshBusTimeData successfully retrieved 3 elements
+(ThreadManager) 2018-11-03 12:25:56,039 Arrived in ThreadManager
+(MainThread) 2018-11-03 12:25:56,047 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 12:25:56,047 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-03 12:26:02,886 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-03 12:26:06,806 RefreshBusTimeData successfully retrieved 4 elements
+(ThreadManager) 2018-11-03 12:26:16,024 Arrived in ThreadManager
+(MainThread) 2018-11-03 12:26:16,024 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 12:26:16,025 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-03 12:26:24,301 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-03 12:26:26,869 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-03 12:26:56,889 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-03 12:27:00,350 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-03 12:27:30,369 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-03 12:27:34,812 RefreshBusTimeData successfully retrieved 3 elements
+(ThreadManager) 2018-11-03 12:27:39,237 Arrived in ThreadManager
+(MainThread) 2018-11-03 12:27:39,237 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 12:27:39,238 ThreadManager : RefreshBusTimeData started
+(ThreadManager) 2018-11-03 12:28:33,943 Arrived in ThreadManager
+(MainThread) 2018-11-03 12:28:33,944 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 12:28:45,769 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-03 12:28:52,231 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-03 12:29:02,236 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-03 12:30:44,627 Beginning of While True Loop
+(ThreadManager) 2018-11-03 13:18:18,142 Arrived in ThreadManager
+(MainThread) 2018-11-03 13:18:18,148 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 13:18:22,905 ThreadManager : RefreshBusTimeData started
+(ThreadManager) 2018-11-03 13:18:59,609 Arrived in ThreadManager
+(MainThread) 2018-11-03 13:18:59,614 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 13:18:59,635 ThreadManager : RefreshBusTimeData started
+(MainThread) 2018-11-03 13:19:26,907 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 13:19:26,909 Arrived in ThreadManager
+(ThreadManager) 2018-11-03 13:19:26,929 ThreadManager : RefreshBusTimeData started
+(ThreadManager) 2018-11-03 13:21:19,228 Arrived in ThreadManager
+(MainThread) 2018-11-03 13:21:19,231 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 13:21:19,239 ThreadManager : RefreshBusTimeData started
+(ThreadManager) 2018-11-03 13:25:08,988 Arrived in ThreadManager
+(MainThread) 2018-11-03 13:25:08,990 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 13:25:08,998 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-03 13:25:15,460 Beginning of While True Loop
+(ThreadManager) 2018-11-03 13:26:06,366 Arrived in ThreadManager
+(MainThread) 2018-11-03 13:26:06,367 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 13:26:06,371 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-03 13:26:06,416 Beginning of While True Loop
+(ThreadManager) 2018-11-03 13:27:22,868 Arrived in ThreadManager
+(MainThread) 2018-11-03 13:27:22,885 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 13:27:22,908 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-03 13:27:35,005 Beginning of While True Loop
+(ThreadManager) 2018-11-03 13:30:17,032 Arrived in ThreadManager
+(MainThread) 2018-11-03 13:30:17,037 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 13:30:17,058 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-03 13:30:17,171 Beginning of While True Loop
+(ThreadManager) 2018-11-03 13:30:37,046 Arrived in ThreadManager
+(MainThread) 2018-11-03 13:30:37,048 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 13:30:37,051 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-03 13:30:37,100 Beginning of While True Loop
+(ThreadManager) 2018-11-03 13:32:00,220 Arrived in ThreadManager
+(MainThread) 2018-11-03 13:32:00,232 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-03 13:32:00,233 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-03 13:32:00,280 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-03 13:32:07,570 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-03 13:32:40,748 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-03 13:32:40,765 RefreshBusTimeData successfully retrieved 3 elements
+(ThreadManager) 2018-11-08 07:49:49,335 Arrived in ThreadManager
+(MainThread) 2018-11-08 07:49:49,335 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-08 07:49:49,336 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-08 07:49:51,126 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-08 07:49:52,377 RefreshBusTimeData successfully retrieved 6 elements
+(MainThread) 2018-11-10 16:37:42,854 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-10 16:37:42,854 Arrived in ThreadManager
+(ThreadManager) 2018-11-10 16:37:42,854 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-10 16:37:44,986 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:37:46,518 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:38:16,531 Beginning of While True Loop
+(ThreadManager) 2018-11-10 16:40:59,808 Arrived in ThreadManager
+(MainThread) 2018-11-10 16:40:59,808 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-10 16:40:59,808 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-10 16:41:02,322 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:41:04,071 RefreshBusTimeData successfully retrieved 0 elements
+(RefreshBusTimeData) 2018-11-10 16:41:34,089 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:41:35,711 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:42:05,718 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:42:07,145 RefreshBusTimeData successfully retrieved 4 elements
+(RefreshBusTimeData) 2018-11-10 16:42:37,151 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:42:39,200 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:43:09,213 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:43:10,929 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:43:40,948 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:43:42,673 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:44:12,685 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:44:14,446 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:44:44,459 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:44:46,286 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:45:16,312 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:45:18,048 RefreshBusTimeData successfully retrieved 4 elements
+(ThreadManager) 2018-11-10 16:45:39,600 Arrived in ThreadManager
+(MainThread) 2018-11-10 16:45:39,600 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-10 16:45:39,600 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-10 16:45:41,186 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:45:42,612 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:45:42,612 RefreshBusTimeData successfully retrieved 3 elements
+(ThreadManager) 2018-11-10 16:46:04,302 Arrived in ThreadManager
+(MainThread) 2018-11-10 16:46:04,302 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-10 16:46:04,302 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-10 16:46:06,289 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:46:08,321 Status Code = 401
+(ThreadManager) 2018-11-10 16:46:37,521 Arrived in ThreadManager
+(MainThread) 2018-11-10 16:46:37,521 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-10 16:46:37,521 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-10 16:46:39,550 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:46:41,505 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:46:41,505 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:47:11,514 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:47:12,841 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:47:12,841 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:47:42,861 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:47:44,901 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:47:44,901 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:48:14,920 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:48:16,545 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:48:16,545 RefreshBusTimeData successfully retrieved 4 elements
+(RefreshBusTimeData) 2018-11-10 16:48:46,565 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:48:48,288 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:48:48,288 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:49:18,296 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:49:20,239 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:49:20,239 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:49:50,256 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:49:52,042 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:49:52,042 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:50:22,056 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:50:24,032 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:50:24,032 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:50:54,037 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:50:56,166 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:50:56,166 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:51:26,189 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:51:28,249 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:51:28,249 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:51:58,260 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:51:59,997 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:51:59,997 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:52:30,015 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:52:34,615 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:52:34,615 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:53:04,629 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:53:06,299 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:53:06,299 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:53:36,308 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:53:37,802 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:53:37,802 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:54:07,826 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:54:09,237 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:54:09,237 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:54:39,256 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:54:41,297 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:54:41,297 RefreshBusTimeData successfully retrieved 4 elements
+(RefreshBusTimeData) 2018-11-10 16:55:11,336 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:55:13,299 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:55:13,299 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:55:43,320 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:55:44,982 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:55:44,982 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:56:15,007 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:56:16,336 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:56:16,336 RefreshBusTimeData successfully retrieved 4 elements
+(RefreshBusTimeData) 2018-11-10 16:56:46,346 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:56:47,974 Status Code = 200
+(RefreshBusTimeData) 2018-11-10 16:56:47,974 RefreshBusTimeData successfully retrieved 3 elements
+(ThreadManager) 2018-11-10 16:57:09,557 Arrived in ThreadManager
+(MainThread) 2018-11-10 16:57:09,557 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-10 16:57:09,557 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-10 16:57:11,430 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:57:12,964 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 16:57:42,977 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:57:44,533 RefreshBusTimeData successfully retrieved 3 elements
+(ThreadManager) 2018-11-10 16:58:17,740 Arrived in ThreadManager
+(MainThread) 2018-11-10 16:58:17,740 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-10 16:58:17,740 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-10 16:58:19,223 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:58:21,151 Received Status Code = 401 when trying to refresh NextBusTimes
+(RefreshBusTimeData) 2018-11-10 16:58:21,151 I will try to login as pi user again
+(ThreadManager) 2018-11-10 16:59:48,416 Arrived in ThreadManager
+(MainThread) 2018-11-10 16:59:48,416 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-10 16:59:48,416 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-10 16:59:49,836 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 16:59:51,781 Received Status Code = 401 when trying to refresh NextBusTimes
+(RefreshBusTimeData) 2018-11-10 16:59:51,781 I will try to login as pi user again
+(ThreadManager) 2018-11-10 17:01:01,129 Arrived in ThreadManager
+(MainThread) 2018-11-10 17:01:01,129 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-10 17:01:01,129 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-10 17:01:02,964 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:01:04,468 Received Status Code = 401 when trying to refresh NextBusTimes
+(RefreshBusTimeData) 2018-11-10 17:01:04,468 I will try to login as pi user again
+(RefreshBusTimeData) 2018-11-10 17:01:35,729 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:01:37,665 Received Status Code = 401 when trying to refresh NextBusTimes
+(RefreshBusTimeData) 2018-11-10 17:01:37,665 I will try to login as pi user again
+(RefreshBusTimeData) 2018-11-10 17:02:09,315 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:02:10,842 Received Status Code = 401 when trying to refresh NextBusTimes
+(RefreshBusTimeData) 2018-11-10 17:02:10,842 I will try to login as pi user again
+(ThreadManager) 2018-11-10 17:02:28,626 Arrived in ThreadManager
+(MainThread) 2018-11-10 17:02:28,626 CityBus NT ThreadManager Started
+(RefreshBusTimeData) 2018-11-10 17:02:28,626 Beginning of While True Loop
+(ThreadManager) 2018-11-10 17:02:28,626 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-10 17:02:30,097 Received Status Code = 401 when trying to refresh NextBusTimes
+(RefreshBusTimeData) 2018-11-10 17:02:30,097 I will try to login as pi user again
+(RefreshBusTimeData) 2018-11-10 17:03:01,832 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:03:03,489 RefreshBusTimeData successfully retrieved 4 elements
+(RefreshBusTimeData) 2018-11-10 17:03:33,506 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:03:35,838 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 17:04:05,852 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:04:08,148 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 17:04:38,173 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:04:39,969 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 17:05:09,990 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:05:12,023 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 17:05:42,045 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:05:45,622 RefreshBusTimeData successfully retrieved 3 elements
+(ThreadManager) 2018-11-10 17:06:11,049 Arrived in ThreadManager
+(MainThread) 2018-11-10 17:06:11,049 CityBus NT ThreadManager Started
+(RefreshBusTimeData) 2018-11-10 17:06:11,049 Beginning of While True Loop
+(ThreadManager) 2018-11-10 17:06:11,049 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-10 17:06:13,041 Received Status Code = 401 when trying to refresh NextBusTimes
+(RefreshBusTimeData) 2018-11-10 17:06:13,041 I will try to login as pi user again
+(RefreshBusTimeData) 2018-11-10 17:06:14,918 Successfully re logged in as pi
+(MainThread) 2018-11-10 17:06:34,495 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-10 17:06:34,495 Arrived in ThreadManager
+(RefreshBusTimeData) 2018-11-10 17:06:34,503 Beginning of While True Loop
+(ThreadManager) 2018-11-10 17:06:34,503 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-10 17:06:36,512 Received Status Code = 401 when trying to refresh NextBusTimes
+(RefreshBusTimeData) 2018-11-10 17:06:36,512 I will try to login as pi user again
+(RefreshBusTimeData) 2018-11-10 17:06:38,450 Successfully re logged in as pi
+(ThreadManager) 2018-11-10 17:07:00,733 Arrived in ThreadManager
+(MainThread) 2018-11-10 17:07:00,733 CityBus NT ThreadManager Started
+(RefreshBusTimeData) 2018-11-10 17:07:00,733 Beginning of While True Loop
+(ThreadManager) 2018-11-10 17:07:00,733 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-10 17:07:02,745 Received Status Code = 401 when trying to refresh NextBusTimes
+(RefreshBusTimeData) 2018-11-10 17:07:02,745 I will try to login as pi user again
+(RefreshBusTimeData) 2018-11-10 17:07:04,292 Successfully re logged in as pi
+(ThreadManager) 2018-11-10 17:29:46,517 Arrived in ThreadManager
+(MainThread) 2018-11-10 17:29:46,517 CityBus NT ThreadManager Started
+(ThreadManager) 2018-11-10 17:29:46,517 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-11-10 17:29:48,191 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:29:49,749 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 17:30:19,762 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:30:21,494 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 17:30:51,519 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:30:53,241 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 17:31:23,274 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:31:25,145 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 17:31:55,154 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:31:56,818 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 17:32:26,829 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:32:28,410 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 17:32:58,420 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:33:00,129 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 17:33:30,146 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:33:31,754 RefreshBusTimeData successfully retrieved 4 elements
+(RefreshBusTimeData) 2018-11-10 17:34:01,779 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:34:03,458 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 17:34:33,481 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:34:34,845 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 17:35:04,852 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:35:06,782 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 17:35:36,807 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:35:38,906 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 17:36:08,925 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:36:10,998 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 17:36:41,017 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:36:42,285 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2018-11-10 17:37:12,294 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:37:13,769 RefreshBusTimeData successfully retrieved 4 elements
+(RefreshBusTimeData) 2018-11-10 17:37:43,778 Beginning of While True Loop
+(RefreshBusTimeData) 2018-11-10 17:37:45,508 RefreshBusTimeData successfully retrieved 3 elements
+(ThreadManager) 2018-12-16 14:06:42,231 Arrived in ThreadManager
+(MainThread) 2018-12-16 14:06:42,233 CityBus NT ThreadManager Started
+(ThreadManager) 2018-12-16 14:06:42,247 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-12-16 14:07:23,953 Logged in as pi, sessionId = 1
+(ThreadManager) 2018-12-16 14:08:11,920 Arrived in ThreadManager
+(MainThread) 2018-12-16 14:08:11,921 CityBus NT ThreadManager Started
+(ThreadManager) 2018-12-16 14:08:11,924 ThreadManager : RefreshBusTimeData started
+(RefreshBusTimeData) 2018-12-16 14:08:14,093 Logged in as pi, sessionId = 1
+(ThreadManager) 2019-02-17 12:55:24,936 Arrived in ThreadManager
+(MainThread) 2019-02-17 12:55:24,936 CityBus NT ThreadManager Started
+(ThreadManager) 2019-02-17 12:55:24,938 ThreadManager : RefreshBusTimeData started
+(ThreadManager) 2019-02-17 12:55:24,939 ThreadManager : KeepDisplayUpdated started
+(RefreshBusTimeData) 2019-02-17 12:55:28,667 Logged in as pi, sessionId = 1
+(RefreshBusTimeData) 2019-02-17 12:55:31,531 <Response [200]> : SUCCESS
+(RefreshBusTimeData) 2019-02-17 12:55:31,531 Beginning of While True Loop
+(RefreshBusTimeData) 2019-02-17 12:55:36,299 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2019-02-17 12:56:06,302 Beginning of While True Loop
+(RefreshBusTimeData) 2019-02-17 12:56:09,422 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2019-02-17 12:56:39,432 Beginning of While True Loop
+(RefreshBusTimeData) 2019-02-17 12:56:42,089 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2019-02-17 12:57:12,096 Beginning of While True Loop
+(RefreshBusTimeData) 2019-02-17 12:57:15,374 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2019-02-17 12:57:45,390 Beginning of While True Loop
+(RefreshBusTimeData) 2019-02-17 12:57:47,935 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2019-02-17 12:58:17,940 Beginning of While True Loop
+(RefreshBusTimeData) 2019-02-17 12:58:20,288 RefreshBusTimeData successfully retrieved 3 elements
+(ThreadManager) 2019-02-17 12:58:29,166 Arrived in ThreadManager
+(MainThread) 2019-02-17 12:58:29,167 CityBus NT ThreadManager Started
+(ThreadManager) 2019-02-17 12:58:29,168 ThreadManager : RefreshBusTimeData started
+(ThreadManager) 2019-02-17 12:58:29,169 ThreadManager : KeepDisplayUpdated started
+(RefreshBusTimeData) 2019-02-17 12:58:32,475 Logged in as pi, sessionId = 1
+(RefreshBusTimeData) 2019-02-17 12:58:35,652 <Response [200]> : SUCCESS
+(RefreshBusTimeData) 2019-02-17 12:58:35,656 Beginning of While True Loop
+(RefreshBusTimeData) 2019-02-17 12:58:40,465 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2019-02-17 12:59:10,471 Beginning of While True Loop
+(RefreshBusTimeData) 2019-02-17 12:59:12,924 RefreshBusTimeData successfully retrieved 3 elements
+(ThreadManager) 2019-02-17 12:59:25,534 Arrived in ThreadManager
+(MainThread) 2019-02-17 12:59:25,534 CityBus NT ThreadManager Started
+(ThreadManager) 2019-02-17 12:59:25,536 ThreadManager : RefreshBusTimeData started
+(ThreadManager) 2019-02-17 12:59:25,537 ThreadManager : KeepDisplayUpdated started
+(RefreshBusTimeData) 2019-02-17 12:59:27,775 Logged in as pi, sessionId = 1
+(RefreshBusTimeData) 2019-02-17 12:59:29,926 <Response [200]> : SUCCESS
+(RefreshBusTimeData) 2019-02-17 12:59:29,926 Beginning of While True Loop
+(RefreshBusTimeData) 2019-02-17 12:59:34,634 RefreshBusTimeData successfully retrieved 3 elements
+(ThreadManager) 2019-02-17 12:59:54,188 Arrived in ThreadManager
+(MainThread) 2019-02-17 12:59:54,188 CityBus NT ThreadManager Started
+(ThreadManager) 2019-02-17 12:59:54,189 ThreadManager : RefreshBusTimeData started
+(KeepDisplayUpdated) 2019-02-17 12:59:54,190 Starting KeepDisplayUpdated
+(ThreadManager) 2019-02-17 12:59:54,201 ThreadManager : KeepDisplayUpdated started
+(RefreshBusTimeData) 2019-02-17 12:59:57,162 Logged in as pi, sessionId = 1
+(RefreshBusTimeData) 2019-02-17 12:59:58,799 <Response [200]> : SUCCESS
+(RefreshBusTimeData) 2019-02-17 12:59:58,799 Beginning of While True Loop
+(ThreadManager) 2019-02-17 13:02:21,580 Arrived in ThreadManager
+(MainThread) 2019-02-17 13:02:21,581 CityBus NT ThreadManager Started
+(ThreadManager) 2019-02-17 13:02:21,583 ThreadManager : RefreshBusTimeData started
+(KeepDisplayUpdated) 2019-02-17 13:02:21,590 Starting KeepDisplayUpdated
+(ThreadManager) 2019-02-17 13:02:21,598 ThreadManager : KeepDisplayUpdated started
+(RefreshBusTimeData) 2019-02-17 13:02:23,356 Logged in as pi, sessionId = 1
+(RefreshBusTimeData) 2019-02-17 13:02:24,628 <Response [200]> : SUCCESS
+(RefreshBusTimeData) 2019-02-17 13:02:24,632 Beginning of While True Loop
+(RefreshBusTimeData) 2019-02-17 13:02:30,044 RefreshBusTimeData successfully retrieved 3 elements
+(KeepDisplayUpdated) 2019-02-17 13:02:31,885 Bus 11 @ 0.6km - 13:03
+(KeepDisplayUpdated) 2019-02-17 13:02:31,885 Bus 11 @ 0.7km - 13:03
+(KeepDisplayUpdated) 2019-02-17 13:02:31,886 Bus 11 @ 2.0km - 13:07
+(RefreshBusTimeData) 2019-02-17 13:03:00,071 Beginning of While True Loop
+(RefreshBusTimeData) 2019-02-17 13:03:02,108 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2019-02-17 13:03:32,115 Beginning of While True Loop
+(RefreshBusTimeData) 2019-02-17 13:03:34,261 RefreshBusTimeData successfully retrieved 3 elements
+(RefreshBusTimeData) 2019-02-17 13:04:04,266 Beginning of While True Loop
+(RefreshBusTimeData) 2019-02-17 13:04:06,925 RefreshBusTimeData successfully retrieved 3 elements
+(MainThread) 2019-02-17 16:39:14,511 CityBus NT ThreadManager Started
+(ThreadManager) 2019-02-17 16:39:14,512 Arrived in ThreadManager
+(ThreadManager) 2019-02-17 16:39:14,513 ThreadManager : RefreshBusTimeData started
+(KeepDisplayUpdated) 2019-02-17 16:39:14,513 Starting KeepDisplayUpdated
+(ThreadManager) 2019-02-17 16:39:14,514 ThreadManager : KeepDisplayUpdated started
+(RefreshBusTimeData) 2019-02-17 16:39:16,573 Logged in as pi, sessionId = 1
+(RefreshBusTimeData) 2019-02-17 16:39:19,561 <Response [200]> : SUCCESS
+(RefreshBusTimeData) 2019-02-17 16:39:19,561 Beginning of While True Loop
+(RefreshBusTimeData) 2019-02-17 16:39:23,977 RefreshBusTimeData successfully retrieved 4 elements
+(RefreshBusTimeData) 2019-02-17 16:39:53,986 Beginning of While True Loop
+(RefreshBusTimeData) 2019-02-17 16:39:56,590 RefreshBusTimeData successfully retrieved 4 elements
+(ThreadManager) 2019-02-17 16:40:10,547 Arrived in ThreadManager
+(MainThread) 2019-02-17 16:40:10,547 CityBus NT ThreadManager Started
+(ThreadManager) 2019-02-17 16:40:10,547 ThreadManager : RefreshBusTimeData started
+(ThreadManager) 2019-02-17 16:40:10,562 ThreadManager : KeepDisplayUpdated started
+(KeepDisplayUpdated) 2019-02-17 16:40:10,562 Starting KeepDisplayUpdated
+(RefreshBusTimeData) 2019-02-17 16:40:12,817 Logged in as pi, sessionId = 1
+(RefreshBusTimeData) 2019-02-17 16:40:15,396 <Response [200]> : SUCCESS
+(RefreshBusTimeData) 2019-02-17 16:40:15,396 Beginning of While True Loop
+(RefreshBusTimeData) 2019-02-17 16:40:19,941 RefreshBusTimeData successfully retrieved 4 elements
+(ThreadManager) 2019-02-17 17:02:27,811 Arrived in ThreadManager
+(MainThread) 2019-02-17 17:02:27,811 CityBus NT ThreadManager Started
+(ThreadManager) 2019-02-17 17:02:27,827 ThreadManager : RefreshBusTimeData started
+(KeepDisplayUpdated) 2019-02-17 17:02:27,827 Starting KeepDisplayUpdated
+(ThreadManager) 2019-02-17 17:02:27,843 ThreadManager : KeepDisplayUpdated started
+(RefreshBusTimeData) 2019-02-17 17:02:29,335 Logged in as pi, sessionId = 1
+(ThreadManager) 2019-02-17 17:03:54,237 Arrived in ThreadManager
+(MainThread) 2019-02-17 17:03:54,237 CityBus NT ThreadManager Started
+(ThreadManager) 2019-02-17 17:03:54,237 ThreadManager : RefreshBusTimeData started
+(KeepDisplayUpdated) 2019-02-17 17:03:54,237 Starting KeepDisplayUpdated
+(ThreadManager) 2019-02-17 17:03:54,237 ThreadManager : KeepDisplayUpdated started
+(RefreshBusTimeData) 2019-02-17 17:03:58,011 Logged in as pi, sessionId = 1
+(RefreshBusTimeData) 2019-02-17 17:03:59,334 <Response [200]> : SUCCESS
+(RefreshBusTimeData) 2019-02-17 17:03:59,334 Beginning of While True Loop
+(RefreshBusTimeData) 2019-02-17 17:04:04,312 RefreshBusTimeData successfully retrieved 3 elements
+(ThreadManager) 2019-11-03 19:14:22,225 Arrived in ThreadManager
+(MainThread) 2019-11-03 19:14:22,228 CityBus NT ThreadManager Started
+(ThreadManager) 2019-11-03 19:14:22,231 ThreadManager : RefreshBusTimeData started
+(KeepDisplayUpdated) 2019-11-03 19:14:22,235 Starting KeepDisplayUpdated
+(ThreadManager) 2019-11-03 19:14:22,251 ThreadManager : KeepDisplayUpdated started
+(RefreshBusTimeData) 2019-11-03 19:14:23,804 Logged in as pi, sessionId = 1
+(RefreshBusTimeData) 2019-11-03 19:14:25,100 <Response [200]> : SUCCESS
+(RefreshBusTimeData) 2019-11-03 19:14:25,112 Beginning of While True Loop
+(RefreshBusTimeData) 2019-11-03 19:14:41,289 RefreshBusTimeData successfully retrieved 0 elements
