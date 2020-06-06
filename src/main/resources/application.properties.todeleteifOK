@@ -1,0 +1,25 @@
+spring.datasource.url= ${JDBC_DATABASE_URL}&createDatabaseIfNotExist=true
+spring.datasource.username= ${JDBC_DATABASE_USERNAME}
+spring.datasource.password= ${JDBC_DATABASE_PASSWORD}
+spring.datasource.type=com.zaxxer.hikari.HikariDataSource
+spring.datasource.hikari.maximumPoolSize=5
+
+spring.jpa.hibernate.connection.provider_class=org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults=false
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.ddl-auto=update
+
+logging.level.org.springframework.web=WARN
+logging.level.org.hibernate=ERROR
+logging.file=logs/hongkongbus.log
+
+spring.devtools.livereload.enabled=false
+
+server.port=${PORT:5000}
+
+debug=true
+
+
+
