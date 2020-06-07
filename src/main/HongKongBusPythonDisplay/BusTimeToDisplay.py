@@ -1,3 +1,10 @@
+import dateutil.parser as dp
+
+def formatTohhmm(arrivalTime):
+    parsedDate = dp.parse(arrivalTime)
+    return parsedDate.strftime('%H:%M')
+
+
 class BusTimeToDisplay:
     busNumber = '0'
     arrivalTime = ''
@@ -8,7 +15,7 @@ class BusTimeToDisplay:
 
     def __init__(self, busNumber='0', arrivalTime='', distance='', isAnError=False, color=(0,0,0)):
         self.busNumber = busNumber
-        self.arrivalTime = arrivalTime
+        self.arrivalTime = formatTohhmm(arrivalTime)
         #If 00 is not found, then it seems like it returns an empty string !! ?????
         self.arrivalTime24H = arrivalTime.replace('00:', '24:')
         ## "Distance : 1.23km" -> "1.23km" -> First 5 characters

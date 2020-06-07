@@ -6,6 +6,7 @@ class CityBusETAItem (
         val data_timestamp : String,
         val eta : ZonedDateTime,
         val etaSequence : Int,
-        val remark : String
+        val remark : String,
+        val busNumber : String
 )
 

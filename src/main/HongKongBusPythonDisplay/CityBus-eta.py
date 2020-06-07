@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+import json
 
 import requests
 import sys, os
@@ -35,8 +36,8 @@ DarkWhite = (100, 100, 100)
 PreciousCyan = (102, 245, 173)
 
 # Root URL
-rootUrl = "https://hong-kong-bus-us.herokuapp.com"
-# rootUrl = "http://127.0.0.1:5000"
+# rootUrl = "https://hong-kong-bus-us.herokuapp.com"
+rootUrl = "http://127.0.0.1:5000"
 
 # Global variable to be used between the 2 threads
 NextArrivalTimes = []
@@ -56,16 +57,16 @@ def GetCityBusProcess():
     for myProcess in psutil.process_iter():
         if 'sudo' in myProcess.cmdline():
             if 'python' in myProcess.cmdline():
-                if ProgramFolder + 'CityBus.py' in myProcess.cmdline() or 'CityBus.py' in myProcess.cmdline():
+                if ProgramFolder + 'CityBus-eta.py' in myProcess.cmdline() or 'CityBus-eta.py' in myProcess.cmdline():
                     if myProcess.pid == os.getppid():
                         myLogger.debug(
-                            "Found sudo, python, and CityBuys.py process, but only current process, no already "
+                            "Found sudo, python, and CityBus-eta.py process, but only current process, no already "
                             "running one")
                     else:
-                        myLogger.debug("Found CityBuys.py process")
+                        myLogger.debug("Found CityBuys-eta.py process")
                         return myProcess
                 else:
-                    myLogger.debug("Found sudo and python, but not CityBus")
+                    myLogger.debug("Found sudo and python, but not CityBus-eta")
             else:
                 myLogger.debug("Found sudo, but not python")
     return None
@@ -76,45 +77,28 @@ def RefreshBusTimeData():
     global myLogger
 
     # sessionIdWhichIKnowEqualsOne = "222"
-    sessionIdWhichIKnowEqualsOne = requests.post(rootUrl + '/users/login', data={"userName": "pi"}).json()
-    myLogger.info("Logged in as pi, sessionId = %s",sessionIdWhichIKnowEqualsOne)
-    answerToChangeConfigName = requests.post(rootUrl + '/sessions/changeConfigName', data={"sessionId": sessionIdWhichIKnowEqualsOne, "configName":"CastleDown   🏰 👇"})
-    if answerToChangeConfigName.status_code == 200:
-        myLogger.info("%s : SUCCESS",answerToChangeConfigName)
-    else:
-        myLogger.error("Couldn't changeConfigName - error code %s, error message %s", answerToChangeConfigName.status_code, answerToChangeConfigName.text)
+    list_of_bus_stops = requests.get(rootUrl + '/users/favourite-stops?userName=pi').json()
+    if len(list_of_bus_stops) != 1:
+        myLogger.error("pi user should't have more than 1 bus stop defined, exiting ...")
+        exit(0)
+    busStopId = list_of_bus_stops[0]['busStopId']
+    myLogger.info("Retrieved 1 bus stops for user 'pi' with id %s",busStopId)
 
     FoundArrivalTimes = []
     while True:
         try:
             myLogger.info("Beginning of While True Loop")
             FoundArrivalTimes = []
-            response = requests.get(rootUrl + '/busTimes/nextFor?sessionId='+str(sessionIdWhichIKnowEqualsOne), timeout=60)
+            response = requests.get(rootUrl + '/bus-eta/bus-stop?stopId='+str(busStopId), timeout=60)
             if response.status_code == 200:
                 data = response.json()
-                for obj in data.get('arrivalTimes'):
+                for obj in data.get('etas'):
                     FoundArrivalTimes.append(
-                        BusTimeToDisplay.BusTimeToDisplay(obj.get('busNumber'), obj.get('arrivalTime'), obj.get('distance'),
-                                                          obj.get('isAnError'), GetDisplayColor(obj.get('busNumber'))))
+                        BusTimeToDisplay.BusTimeToDisplay(obj.get('busNumber'), obj.get('eta'), "",
+                                                          False, GetDisplayColor(obj.get('busNumber'))))
                 myLogger.info("RefreshBusTimeData successfully retrieved %s elements", len(FoundArrivalTimes))
             else:
-                myLogger.error("Received Status Code = %s when trying to refresh NextBusTimes", response.status_code)
-                if response.status_code == 401:
-                    # I need to login again
-                    myLogger.info("I will try to login as pi user again")
-                    responseBis = requests.post(rootUrl + '/users/login', data={"userName": "pi"})
-                    if responseBis.status_code != 200 :
-                        myLogger.error("Couldn't relogin for pi : status = %s, message = ", responseBis.status_code, responseBis.text)
-                    else:
-                        myLogger.info("Successfully re logged in as pi")
-                        myLogger.info("I will try to change my configBusName to CastleDown")
-                        responseBis = requests.post(rootUrl + '/sessions/changeConfigName', data={"sessionId": sessionIdWhichIKnowEqualsOne, "configName":"CastleDown   🏰 👇"})
-                        if responseBis.status_code != 200 :
-                            myLogger.error("Couldn't change busConfigName after relogging in : status = %s, message = ", responseBis.status_code, responseBis.text)
-                        else:
-                            myLogger.info("Successfully change busConfigName to CastleDown")
-                else:
-                    myLogger.error("I don't know how to handle this exception : code %s, message %s", response.status_code, response.text)
+                myLogger.error("Received Status Code = %s when trying to refresh NextBusTimes, skipping to next loop", response.status_code)
         except requests.ConnectionError as err:
             FoundArrivalTimes.append(
                 BusTimeToDisplay.BusTimeToDisplay('0', 'OFFLN', 'OFFLN', DarkRed)

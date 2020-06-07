@@ -11,24 +11,34 @@ class BusStopService(val busNumberRepository: BusNumberRepository, val busStopRe
 
     fun upsertNewBusStop(newBusStop: BusStop): Long {
         if (busStopRepository.existsByName(newBusStop.busStopName)) {
-            val updatedBusStop: BusStopDao = busStopRepository.getByName(newBusStop.busStopName)
+            logger.info("Found busStop with name ${newBusStop.busStopName} to update")
+
+            val updatedBusStopDao: BusStopDao = busStopRepository.getByName(newBusStop.busStopName)
             val busNumberDaos: MutableList<BusNumberDao> = mutableListOf()
+
+            logger.info("Trying to load ${newBusStop.busNumbers.size} busNumbers from DB to replace them in this bus stop")
             for (busNumber: String in newBusStop.busNumbers) {
+                // TODO : check if busNumber exists
                 busNumberDaos.add(busNumberRepository.getByBusNumber(busNumber))
             }
-            updatedBusStop.replaceBusNumbers(busNumberDaos)
-            logger.info("Before save-update new bus stop in DB")
-            busStopRepository.save(updatedBusStop)
-            logger.info("After save-update new bus stop in DB")
-            return 666
+            logger.info("Loaded ${busNumberDaos.size} bus numbers from DB")
+
+            updatedBusStopDao.replaceBusNumbers(busNumberDaos)
+            busStopRepository.save(updatedBusStopDao)
+            logger.info("Successfully updated ${newBusStop.busStopName} in DB")
+            return updatedBusStopDao.busStopId
         } else {
-            logger.info("Before save new bus stop in DB")
+            logger.info("Creating a new bus stop with name ${newBusStop.busStopName}")
             val busNumberDaos: MutableList<BusNumberDao> = mutableListOf()
+            logger.info("Trying to load ${newBusStop.busNumbers.size} busNumbers from DB to add them in this bus stop")
             for (busNumber: String in newBusStop.busNumbers) {
+                // TODO : check if busNumber exists
                 busNumberDaos.add(busNumberRepository.getByBusNumber(busNumber))
             }
+            logger.info("Loaded ${busNumberDaos.size} bus numbers from DB")
+
             val insertedBusStopId: Long = busStopRepository.save(newBusStop.toDao(busNumberDaos)).busStopId
-            logger.info("After save new bus stop in DB")
+            logger.info("Successfully added ${newBusStop.busStopName} in DB")
             return insertedBusStopId
         }
     }
