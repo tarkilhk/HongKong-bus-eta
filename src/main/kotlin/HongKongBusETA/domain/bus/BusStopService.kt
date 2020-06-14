@@ -1,6 +1,7 @@
 package HongKongBusETA.domain.bus
 
 import HongKongBusETA.infrastructure.datapersistence.bus.*
+import javassist.NotFoundException
 import org.slf4j.LoggerFactory
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
@@ -18,8 +19,14 @@ class BusStopService(val busNumberRepository: BusNumberRepository, val busStopRe
 
             logger.info("Trying to load ${newBusStop.busNumbers.size} busNumbers from DB to replace them in this bus stop")
             for (busNumber: String in newBusStop.busNumbers) {
-                // TODO : check if busNumber exists
-                busNumberDaos.add(busNumberRepository.getByBusNumber(busNumber))
+                // This is not atomic, and if some bus numbers exist, and some don't,
+                // it will insert until it finds one that doesn't exist and stop there, which is crap
+                if(this.busNumberRepository.existsByBusNumber(busNumber)) {
+                    busNumberDaos.add(busNumberRepository.getByBusNumber(busNumber))
+                }
+                else {
+                    throw NotFoundException("Bus Number '$busNumber' doesn't exist")
+                }
             }
             logger.info("Loaded ${busNumberDaos.size} bus numbers from DB")
 
@@ -32,8 +39,14 @@ class BusStopService(val busNumberRepository: BusNumberRepository, val busStopRe
             val busNumberDaos: MutableList<BusNumberDao> = mutableListOf()
             logger.info("Trying to load ${newBusStop.busNumbers.size} busNumbers from DB to add them in this bus stop")
             for (busNumber: String in newBusStop.busNumbers) {
-                // TODO : check if busNumber exists
-                busNumberDaos.add(busNumberRepository.getByBusNumber(busNumber))
+                // This is not atomic, and if some bus numbers exist, and some don't,
+                // it will insert until it finds one that doesn't exist and stop there, which is crap
+                if(this.busNumberRepository.existsByBusNumber(busNumber)) {
+                    busNumberDaos.add(busNumberRepository.getByBusNumber(busNumber))
+                }
+                else {
+                    throw NotFoundException("Bus Number '$busNumber' doesn't exist")
+                }
             }
             logger.info("Loaded ${busNumberDaos.size} bus numbers from DB")
 

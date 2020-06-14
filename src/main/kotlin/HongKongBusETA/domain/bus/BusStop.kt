@@ -5,10 +5,10 @@ import HongKongBusETA.infrastructure.datapersistence.bus.BusStopDao
 import java.util.*
 
 data class BusStop(
-        val busStopId : Long = -1,
-        val busStopName: String = "",
-        val busNumbers: MutableList<String> = mutableListOf(),
-        val officialHKBusStopId : String = "") {
+        var busStopId : Long = -1,
+        var busStopName: String = "",
+        var busNumbers: MutableList<String> = mutableListOf(),
+        var officialHKBusStopId : String = "") {
 
     constructor(busStopDao: BusStopDao) : this(busStopId = busStopDao.busStopId,busStopName = busStopDao.name, officialHKBusStopId = busStopDao.officialHKBusStopId, busNumbers = mutableListOf<String>()) {
         for (busNumberDao in busStopDao.busNumbers) {
@@ -16,7 +16,12 @@ data class BusStop(
         }
     }
 
-    constructor(officialHKBusStopId: String, busStopName: String, busNumbers: MutableList<String>) : this()
+    constructor(officialHKBusStopId: String, busStopName: String, busNumbers: MutableList<String>) : this() {
+        this.busStopId = -1
+        this.busStopName = busStopName
+        this.busNumbers = busNumbers
+        this.officialHKBusStopId = officialHKBusStopId
+    }
 
     override fun toString(): String = "Bus Stop Name $busStopName - HK official stop Id $officialHKBusStopId"
 
