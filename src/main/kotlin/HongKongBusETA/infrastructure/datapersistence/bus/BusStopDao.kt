@@ -13,7 +13,7 @@ data class BusStopDao (
         val name: String,
 
         @Column
-        val officialHKBusStopId: String,
+        var officialHKBusStopId: String,
 
         @ManyToMany(cascade = arrayOf(CascadeType.ALL))
         @JoinTable(
@@ -30,7 +30,7 @@ data class BusStopDao (
         val users: MutableList<User> = mutableListOf()
 )
 {
-        constructor(busNumber: String,busName: String, officialHKBusStopId: String) : this(-1, busName, officialHKBusStopId)
+        constructor(busStopName: String, officialHKBusStopId: String) : this(-1, busStopName, officialHKBusStopId)
         constructor() : this(-1, "", "0")
 
         override fun toString(): String {
@@ -43,5 +43,9 @@ data class BusStopDao (
                 for(busNumerDao:BusNumberDao in busNumbersDaos) {
                         this.busNumbers.add(busNumerDao)
                 }
+        }
+
+        fun changeOfficialHKBusStopId(officialHKBusStopId: String) {
+                this.officialHKBusStopId = officialHKBusStopId
         }
 }

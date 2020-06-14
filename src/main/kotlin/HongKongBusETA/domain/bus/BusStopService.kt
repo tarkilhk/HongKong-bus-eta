@@ -14,7 +14,7 @@ class BusStopService(val busNumberRepository: BusNumberRepository, val busStopRe
         if (busStopRepository.existsByName(newBusStop.busStopName)) {
             logger.info("Found busStop with name ${newBusStop.busStopName} to update")
 
-            val updatedBusStopDao: BusStopDao = busStopRepository.getByName(newBusStop.busStopName)
+            val toBeUpdatedBusStopDao: BusStopDao = busStopRepository.getByName(newBusStop.busStopName)
             val busNumberDaos: MutableList<BusNumberDao> = mutableListOf()
 
             logger.info("Trying to load ${newBusStop.busNumbers.size} busNumbers from DB to replace them in this bus stop")
@@ -30,10 +30,11 @@ class BusStopService(val busNumberRepository: BusNumberRepository, val busStopRe
             }
             logger.info("Loaded ${busNumberDaos.size} bus numbers from DB")
 
-            updatedBusStopDao.replaceBusNumbers(busNumberDaos)
-            busStopRepository.save(updatedBusStopDao)
+            toBeUpdatedBusStopDao.changeOfficialHKBusStopId(newBusStop.officialHKBusStopId)
+            toBeUpdatedBusStopDao.replaceBusNumbers(busNumberDaos)
+            busStopRepository.save(toBeUpdatedBusStopDao)
             logger.info("Successfully updated ${newBusStop.busStopName} in DB")
-            return updatedBusStopDao.busStopId
+            return toBeUpdatedBusStopDao.busStopId
         } else {
             logger.info("Creating a new bus stop with name ${newBusStop.busStopName}")
             val busNumberDaos: MutableList<BusNumberDao> = mutableListOf()
@@ -65,10 +66,10 @@ class BusStopService(val busNumberRepository: BusNumberRepository, val busStopRe
 //    }
 
     fun getBusStopByBusStopId(stopId: Long): BusStop {
-        if (busStopRepository.existsById(stopId)) {
-            return BusStop(this.busStopRepository.findByIdOrNull(stopId)!!)
+        return if (busStopRepository.existsById(stopId)) {
+            BusStop(this.busStopRepository.findByIdOrNull(stopId)!!)
         } else {
-            return BusStop(-1, "Unknown Bus Stop", mutableListOf(), "")
+            BusStop(-1, "Unknown Bus Stop", mutableListOf(), "")
         }
     }
 }
