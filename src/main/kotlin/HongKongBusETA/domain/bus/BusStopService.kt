@@ -7,7 +7,7 @@ import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
 
 @Service
-class BusStopService(val busNumberRepository: BusNumberRepository, val busStopRepository: BusStopRepository) {
+class BusStopService(private val busNumberRepository: BusNumberRepository, private val busStopRepository: BusStopRepository) {
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun upsertNewBusStop(newBusStop: BusStop): Long {
@@ -71,5 +71,9 @@ class BusStopService(val busNumberRepository: BusNumberRepository, val busStopRe
         } else {
             BusStop(-1, "Unknown Bus Stop", mutableListOf(), "")
         }
+    }
+
+    fun busStopExistsById(stopId: Long): Boolean {
+        return this.busStopRepository.existsById(stopId)
     }
 }

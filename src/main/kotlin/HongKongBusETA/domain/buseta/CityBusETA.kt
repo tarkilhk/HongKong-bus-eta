@@ -8,16 +8,18 @@ class CityBusETA() {
     var lastRefreshTime: ZonedDateTime = ZonedDateTime.now()
     var message : String  = ""
     val ETAs : MutableList<CityBusETAItem> = mutableListOf()
+    var isError : Boolean = false
 
-    constructor(message:String, lastRefreshTime: ZonedDateTime) : this() {
+    constructor(message:String, isError:Boolean) : this() {
         this.message = message
-        this.lastRefreshTime = lastRefreshTime
+        this.isError = isError
+        this.lastRefreshTime = ZonedDateTime.now()
     }
 
     constructor(cityBusETADto: CityBusETADto, busNumber : String) : this() {
         if (cityBusETADto.data.size == 0) {
             this.lastRefreshTime = ZonedDateTime.now()
-            this.message = "No bus"
+            this.message = "No bus $busNumber"
         }
         else {
             lastRefreshTime = ZonedDateTime.parse(cityBusETADto.data.first().data_timestamp)
