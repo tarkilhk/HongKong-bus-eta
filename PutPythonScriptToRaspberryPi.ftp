@@ -1,0 +1,8 @@
+open pibus
+pi
+raspberry
+lcd "src\main\HongKongBusPythonDisplay"
+cd Downloads/rpi-rgb-led-matrix-master/
+put CityBus-eta.py CityBus-eta.py
+disconnect
+quit

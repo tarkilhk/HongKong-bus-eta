@@ -1,17 +1,19 @@
 # -*- coding: UTF-8 -*-
 import json
+import logging
+import os
+import threading
+from logging.handlers import RotatingFileHandler
 
+import psutil
 import requests
-import sys, os
-from PIL import ImageFont
+import sys
+import time
 from PIL import Image
 from PIL import ImageDraw
-import time
-import threading
-import psutil
-import logging
-from logging.handlers import RotatingFileHandler
-import BusTimeToDisplay
+from PIL import ImageFont
+
+import BusTimeToDisplayNoDistance
 
 # Define running folder
 if os.name == 'nt':
@@ -22,12 +24,12 @@ else:
     from rgbmatrix import Adafruit_RGBmatrix
 
 # Logging mechanism
-myLogger = logging.getLogger('RotatingLogs')
-myHandler = RotatingFileHandler(ProgramFolder + "CityBus.log", maxBytes=20000000, backupCount=5)
+log = logging.getLogger('RotatingLogs')
+myHandler = RotatingFileHandler(ProgramFolder + "CityBus-eta.log", maxBytes=20000000, backupCount=5)
 myHandler.setLevel(logging.INFO)
 myHandler.setFormatter(logging.Formatter('(%(threadName)s) %(asctime)s %(message)s'))
-myLogger.addHandler(myHandler)
-myLogger.setLevel(logging.INFO)
+log.addHandler(myHandler)
+log.setLevel(logging.INFO)
 
 # Define colors
 DarkRed = (50, 0, 0)
@@ -53,72 +55,88 @@ def GetDisplayColor(busNumber):
 
 
 def GetCityBusProcess():
-    global myLogger
+    global log
     for myProcess in psutil.process_iter():
         if 'sudo' in myProcess.cmdline():
             if 'python' in myProcess.cmdline():
                 if ProgramFolder + 'CityBus-eta.py' in myProcess.cmdline() or 'CityBus-eta.py' in myProcess.cmdline():
                     if myProcess.pid == os.getppid():
-                        myLogger.debug(
+                        log.debug(
                             "Found sudo, python, and CityBus-eta.py process, but only current process, no already "
                             "running one")
                     else:
-                        myLogger.debug("Found CityBuys-eta.py process")
+                        log.debug("Found CityBuys-eta.py process")
                         return myProcess
                 else:
-                    myLogger.debug("Found sudo and python, but not CityBus-eta")
+                    log.debug("Found sudo and python, but not CityBus-eta")
             else:
-                myLogger.debug("Found sudo, but not python")
+                log.debug("Found sudo, but not python")
     return None
 
 
 def RefreshBusTimeData():
     global NextArrivalTimes
-    global myLogger
+    global log
 
     # sessionIdWhichIKnowEqualsOne = "222"
     list_of_bus_stops = requests.get(rootUrl + '/users/favourite-stops?userName=pi').json()
     if len(list_of_bus_stops) != 1:
-        myLogger.error("pi user should't have more than 1 bus stop defined, exiting ...")
+        log.error("pi user should't have more than 1 bus stop defined, exiting ...")
         exit(0)
     busStopId = list_of_bus_stops[0]['busStopId']
-    myLogger.info("Retrieved 1 bus stops for user 'pi' with id %s",busStopId)
+    log.info("Retrieved 1 bus stops for user 'pi' with id %s", busStopId)
 
     FoundArrivalTimes = []
     while True:
         try:
-            myLogger.info("Beginning of While True Loop")
+            log.info("Beginning of RefreshBusTimeData While True Loop")
             FoundArrivalTimes = []
-            response = requests.get(rootUrl + '/bus-eta/bus-stop?stopId='+str(busStopId), timeout=60)
+
+            timeout = 30
+            start = time.time()
+            body = []
+
+            response = requests.get(rootUrl + '/bus-eta/bus-stop?stopId=' + str(busStopId), timeout=timeout,
+                                    stream=True)
+            for chunk in response.iter_content(1024):  # Adjust this value to provide more or less granularity.
+                body.append(chunk)
+                if time.time() > (start + timeout):
+                    log.error(
+                        "Getting data from backend took more than {} seconds, breaking operation".format(str(timeout)))
+                    break  # You can set an error value here as well if you want.
+            content = b''.join(body)
+
             if response.status_code == 200:
-                data = response.json()
+                data = json.loads(content.decode())
                 for obj in data.get('etas'):
                     FoundArrivalTimes.append(
-                        BusTimeToDisplay.BusTimeToDisplay(obj.get('busNumber'), obj.get('eta'), "",
-                                                          False, GetDisplayColor(obj.get('busNumber'))))
-                myLogger.info("RefreshBusTimeData successfully retrieved %s elements", len(FoundArrivalTimes))
+                        BusTimeToDisplayNoDistance.BusTimeToDisplay(obj.get('busNumber'), obj.get('eta'), "",
+                                                                    data.get('isError'),
+                                                                    GetDisplayColor(obj.get('busNumber'))))
+                log.info("RefreshBusTimeData successfully retrieved %s elements", len(FoundArrivalTimes))
             else:
-                myLogger.error("Received Status Code = %s when trying to refresh NextBusTimes, skipping to next loop", response.status_code)
+                log.error("Received Status Code = %s when trying to refresh NextBusTimes, skipping to next loop",
+                          response.status_code)
         except requests.ConnectionError as err:
             FoundArrivalTimes.append(
-                BusTimeToDisplay.BusTimeToDisplay('0', 'OFFLN', 'OFFLN', DarkRed)
+                BusTimeToDisplayNoDistance.BusTimeToDisplay('0', 'OFFLN', 'OFFLN', DarkRed)
             )
-            myLogger.error('Connection error while refreshing BusTimeData')
-            myLogger.exception(err)
+            log.error('Connection error while refreshing BusTimeData')
+            log.exception(err)
             time.sleep(30)
         except requests.exceptions.Timeout as err:
             FoundArrivalTimes.append(
-                BusTimeToDisplay.BusTimeToDisplay('0', 'TMOUT', 'TMOUT', DarkRed)
+                BusTimeToDisplayNoDistance.BusTimeToDisplay('0', 'TMOUT', 'TMOUT', DarkRed)
             )
-            myLogger.error('Time out while refreshing BusTimeData')
-            myLogger.exception(err)
+            log.error('Time out while refreshing BusTimeData')
+            log.exception(err)
             time.sleep(30)
         except requests.exceptions.RequestException as err:
-            myLogger.error("Couldn't GET the BusTimeData")
-            myLogger.exception(err)
+            log.error("Couldn't GET the BusTimeData")
+            log.exception(err)
         except Exception as err:
-            myLogger.error("Unmanaged exception caught during GET nextBusTimesFor - response code %s",
-                           str(err))
+            log.error("Unmanaged exception caught during GET nextBusTimesFor - response code %s",
+                      str(err))
         finally:
             NextArrivalTimes = sorted(FoundArrivalTimes,
                                       key=lambda myBusTime: myBusTime.arrivalTime.replace("00:", "24:"))
@@ -127,14 +145,14 @@ def RefreshBusTimeData():
 
 def KeepDisplayUpdated():
     global NextArrivalTimes
-    global myLogger
+    global log
 
     # Rows and chain length are both required parameters:
     matrix = Adafruit_RGBmatrix(32, 2)
 
     localNextArrivalTimesToAvoidConcurrencyIssues = []
 
-    myLogger.info("Starting KeepDisplayUpdated")
+    log.info("Starting KeepDisplayUpdated")
     fontSize = 10
     # font = ImageFont.truetype("/usr/share/fonts/truetype/freefont/FreeSans.ttf", fontSize)
     # font = ImageFont.truetype("/home/pi/Downloads/5by7.ttf", fontSize)
@@ -149,7 +167,7 @@ def KeepDisplayUpdated():
 
         localNextArrivalTimesToAvoidConcurrencyIssues = NextArrivalTimes
         for nextArrivalTime in NextArrivalTimes:
-            myLogger.debug(nextArrivalTime)
+            log.debug(nextArrivalTime)
 
         if len(localNextArrivalTimesToAvoidConcurrencyIssues) == 0:
             myDraw.text((3, fontSize), "No bus", DarkRed, font=font)
@@ -211,32 +229,34 @@ def KeepDisplayUpdated():
                 myDraw.text((35, fontSize * 2), localNextArrivalTimesToAvoidConcurrencyIssues[3].distance,
                             localNextArrivalTimesToAvoidConcurrencyIssues[3].color, font=font)
 
-        myLogger.debug("DisplayUpdated : Before RGBMatrix.Clear")
+        log.debug("DisplayUpdated : Before RGBMatrix.Clear")
         matrix.Clear()
 
-        myLogger.debug("DisplayUpdated : Before RGBMatrix.SetImage")
+        log.debug("DisplayUpdated : Before RGBMatrix.SetImage")
         matrix.SetImage(myImage.im.id, 0, 0)
 
         if displaying == 'arrivalTime':
-            myLogger.debug("KeepDisplayUpdated sleeping for 3 seconds")
-            time.sleep(3)
-            myLogger.debug("KeepDisplayUpdated arrivalTime SLEEP DONE")
-            displaying = 'distance'
+            log.debug("KeepDisplayUpdated sleeping for 3 seconds")
+            time.sleep(5)
+            # if distance comes again one day, just uncomment  the 3 lines of code below (and remove time.sleep(5) above)
+            # time.sleep(3)
+            # myLogger.debug("KeepDisplayUpdated arrivalTime SLEEP DONE")
+            # displaying = 'distance'
         else:
-            myLogger.debug("KeepDisplayUpdated sleeping for 1 second")
+            log.debug("KeepDisplayUpdated sleeping for 1 second")
             time.sleep(1)
-            myLogger.debug("KeepDisplayUpdated distance SLEEP DONE")
+            log.debug("KeepDisplayUpdated distance SLEEP DONE")
             displaying = 'arrivalTime'
 
 
 def ThreadManager():
-    global myLogger
+    global log
 
     # wakes up every 5 minutes to check if the 2 threads are running
     # restarts missing ones if needed
 
     print("Arrived in ThreadManager")
-    myLogger.warning("Arrived in ThreadManager")
+    log.warning("Arrived in ThreadManager")
 
     myRefreshBusTimeDataThread = threading.Thread(name='RefreshBusTimeData', target=RefreshBusTimeData)
     myKeepDisplayUpdatedThread = threading.Thread(name='KeepDisplayUpdated', target=KeepDisplayUpdated)
@@ -245,12 +265,12 @@ def ThreadManager():
         print("ThreadManager While True Loop started")
         if not myRefreshBusTimeDataThread.isAlive():
             myRefreshBusTimeDataThread.start()
-            myLogger.info('ThreadManager : RefreshBusTimeData started')
+            log.info('ThreadManager : RefreshBusTimeData started')
         # if not myKeepDisplayUpdatedThread.isAlive() and os.name != 'nt':
         if not myKeepDisplayUpdatedThread.isAlive():
             myKeepDisplayUpdatedThread.start()
-            myLogger.info('ThreadManager : KeepDisplayUpdated started')
-        time.sleep(300)
+            log.info('ThreadManager : KeepDisplayUpdated started')
+        time.sleep(30)
 
 
 try:
@@ -260,37 +280,37 @@ try:
     if os.name == 'nt':
         myThreadManagerThread.start()
         print("Main : CityBus NT started")
-        myLogger.warning("CityBus NT ThreadManager Started")
+        log.warning("CityBus NT ThreadManager Started")
     else:
         myProcess = GetCityBusProcess()
         if len(sys.argv) < 2:
             print("Wrong arguments, you need to specify start or stop")
-            myLogger.error("Wrong argument, only start and stop are supported")
+            log.error("Wrong argument, only start and stop are supported")
             sys.exit()
 
         # If process is running already
         if myProcess is not None:
             if sys.argv[1] == "start":
                 print("CityBus is already running, cannot start a second time")
-                myLogger.error("Main : CityBus is already running, cannot start a second time")
+                log.error("Main : CityBus is already running, cannot start a second time")
             elif sys.argv[1] == "stop":
-                myLogger.warning("Main : CityBus stopping")
+                log.warning("Main : CityBus stopping")
                 myProcess.terminate()
                 print("CityBus stopped")
             else:
                 print("Wrong argument, only start and stop are supported")
-                myLogger.error("Main : Wrong argument, only start and stop are supported")
+                log.error("Main : Wrong argument, only start and stop are supported")
         else:
             if sys.argv[1] == "start":
-                myLogger.warning('Starting')
+                log.warning('Starting')
                 myThreadManagerThread.start()
                 print("CityBus started")
-                myLogger.warning("Main : CityBus ThreadManager Started")
+                log.warning("Main : CityBus ThreadManager Started")
             elif sys.argv[1] == "stop":
                 print("CityBus is not running, cannot stop it")
-                myLogger.error("Main : CityBus is not running, cannot stop it")
+                log.error("Main : CityBus is not running, cannot stop it")
             else:
                 print("Wrong argument, only start and stop are supported")
-                myLogger.error("Main : Wrong argument, only start and stop are supported")
+                log.error("Main : Wrong argument, only start and stop are supported")
 except:
-    myLogger.exception("Unable to run the program")
+    log.exception("Unable to run the program")
